@@ -8,49 +8,50 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/estilo.css" />
-    <script src="js/script.js"></script>
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/7ff0a0897d.js"></script>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <img src="/img/logo/JDIGITAL.png" alt="" width="80px">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Jdigital</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-dark navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="catalogo" href="Vistas/catalogo.html">Catalogo</a>
+                            <a class="nav-link" href="Vistas/catalogo.html">Catalogo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="contacto" href="Vistas/contacto.html">Contacto</a>
+                            <a class="nav-link" href="Vistas/contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link navbar-dark dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Comunidad
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item navbar-dark" href="Vistas/videos.html">Videos</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item navbar-dark" href="Vistas/memes.html">Memes</a></li>
+                            </ul>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
                 </div>
             </div>
         </nav>
     </header>
 
     <main>
-
-
-
-
-        <h1>Jdigital</h1>
-
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#foto1" data-bs-slide-to="0" class="active" aria-current="true"
@@ -63,7 +64,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="https://www.playfactory.cl/wp-content/uploads/2022/07/Sin-titulo-Post-de-Instagram-14-1.png"
-                        width="500" height="500" class="pcgamer" alt="...">
+                        width="500" height="500" class="pcgamer" alt="..."  >
                     <div class="text-carousel">
                         <h5>Xtreme PC Gamer</h5>
                         <p>Intel I5 10400F | RTX 3060TI | 16GB | 480SSD | 600W | Win11</p>
@@ -103,67 +104,90 @@
         <section class="cursos">
 
             <article>
-                <i class="fa location"></i>
+                <i class="Cuotas"></i>
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABmJLR0QA/wD/AP+gvaeTAAACPElEQVR4nO3dTW7TQBjG8T+IrhpxArgAIrBAfJyiZdEVBwrLAleAA9BztOyr7PgQ7GklKiG1LNwuMjHtxLHVR/H/J80ikseavo/GjlPpNUiSJEmSJEmSJEkarzuVx20Bu8Br4BnwENgealEb4hT4AXwBPgMHwN8+TrwLzIELx1pjflnLzu4CbwP+kE0a58DssrYrM4zhxmyFHIBma50XJ/kD7AMv8P5RY5umVu9oalfulJ3aE22xfM/4Cjzud72jMgW+sVjTOU2tb7TH8s4wjPVNgTMWa7tXM/FTMWl/oAWO0XsWa/uxZtJxMen5UKsboZcs1va4ZtJJMWky1OpGaMJibU/KA9qe1C8qjlF319a30wOKhmMgYQwkzL2KY8prngbkDgljIGEMJIyBhDGQMAYSxkDCGEgYAwlT86Tur739uvaXD3dIGAMJYyBhDCSMgYSp+ZZV67b/b7IR3wbdIWEMJIyBhOnzHrIR1/Db5g4JYyBhDCSMgYQxkDAGEsZAwhhIGAMJYyBhDCSMgYQxkDAGEsZAwhhIGAMJYyBhDCRMWyBlQxSbz/TnfvH5d3lAWyA/i8+PeluOylr+Kg9oC+So+Pymt+WorOVhzaS2Fn/Tftc1Sk/p2OLvf00wDaW7J6zRBBPa28Se0fQMfIU3+hoTmlp9YHlnrNQm9oqNlIcbKzdShuaGP2N5pzi6j7VajV/ZwWb8fYw5FZeprq+reID3kZucAt9pXldxQI+vq5AkSZIkSZIkSZK0qf4BppdpF5Dv9rwAAAAASUVORK5CYII=">
                 <h1>6 cuotas sin interes</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel culpa laboriosam iste commodi aut
-                    reprehenderit labore sapiente itaque animi deserunt. Accusamus dolore ab soluta officiis odit
-                    dignissimos voluptate cupiditate, recusandae.
-                </p>
-                <a href="">Ver Curso</a>
+                <strong>
+                    <p>
+                        Paga con tus tarjetas y olvidate de los intereses.
+                    </p>
+                </strong>
             </article>
             <article>
-                <i class="fab fa-js-square"></i>
+                <i class="Despacho"></i>
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABmJLR0QA/wD/AP+gvaeTAAAFd0lEQVR4nO2dS2hdRRjHf7ktjZBYWi1omlZ0o7ZVhIjufGx8ImqydCXYFhvSB7hw123BjehCfKHgxpURtRtFXLRiFUWTikoxVLGSFluNTQt5NnExufbeOXPvmXPON+dMbr4fDOReznyP+7/3zDlzvpmAoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoihKFWwBjgCngDlguUPaPDABvARcL/ZpBWYAOEv1H17oNgncJfSZBWMLa0OMevsD2CTyyQWgBrwA3Fh1ICWyHThYdRDtOEXzN+hloLfSiGTpAd6gOceTlUaUgj2A91QbThA205zjTLXhtKYLE6D9XieyKvKsVR2A0owKEhkqSGSoIJGhgkSGChIZKkhkrGVBjgOXKT43dhn4CXgVuEMiMNtBp1LGxOUS8A6wUTLQTqXMGeUfgZulAu1Uyp7mPwfcLhFop2Ln+SvmwVxRtgEjwF8OH78D/UUD7VTsPCXEaOQ64FOHny+B9VkMrVVBQrAOeM/h60gWIyqILOuBjyxfV4DHfA2oIO3pxowRX1PsvuU8ZrwJFuhqI0+e/cD3jr5523E8xhMVxE03MOboV7SljicqiJsDjj4SLXU8UUHcfGMd/y1wWw6/m4HTlq2244kK4mbaOv7WAr7vJVnd03I8UUFkjk/jkMOmczxRQWSOT6ML+MCyuQQ8GdpxrFQtCLjHkyngltCOYyQGQQDuITmefFyG49iIRRCAFx32Hy7DcUzEJMg1mGURjfaPleE4JmISBGC/w8eOMhzHQmyCbAQuWT4Or+WqkzSmrdd3BrD/ifXefSpIa8at1+8jL8rn1ms9ZbXhWUef0G0uT6Crlax51oAvHP1CNxWkDZsoXxQVJIUa5vR1DLjosCPadI1h9TTFpVdZkaGCRIYKEhkqSGSoIJGhgkSGChIZmcrkM3ATMAQ8hKllqm//dA6z+9BnwChwJpB/aVrlcwb4DTiKeQz7p4QzyTv17cC7mG310u5K5zHr8bwKkAXIk2eWfBYw20D1FY1LSpAh4B+PwO32NzBYwK8vWfPMm89F4PEicUkIshdTY5R3DmcJ2J3Tty9Z8iyazyKwL29cRQUZwhQQ23bGMM+Nd2A2ResBdmKKmMcdx18h7C/FN0+pfBbx+6WICrIVuGD1nwH20P4Krob5Fs5afc+T/Rzsi0+e0vn8S/p+lqKCvO0I/v4M/R8gmcSbGWPwxSfPEPm8njWuvIJsdTjfk6F/nX2WjVnC/ErS8gyVzwLtl0Yn4rJLUXyXC49Y/cbId6NZw+wS2mhrOIeddvSSTNxeXhAyn1YD/IB13DQkF6ZMAHd7OB61+u3PEXydg5at0QK2bHqBV0gK8h0rVR4rhMznqOOYAczmBY3HnQC5pVuNyWVlp1AMkk0yn188fY6A3OLGIpsvXyvgX7pJ5mOvxnK1H4ANNUwt0BMkC8M6kQnMPFpsjGE0mG98sxtz3jxBcqAP/RPflcOfb5sDfgYOY765XcAzmPKedlUkkvm4TlmXgK8wp6kNBXz9jz0IHihgy15/Jzmo+xIyH7uGNwj2ZeI4+S4T12E2/Gq0JX3Z60PIfHzntQrRR/JGam8OO8OWjRmq+fcZofJZwNx0loI91TCLmT7w5UHKmzrxIUQ+rwnH2JY+kpNxs5ifaNpk3DDuycUq/7mMdD5TwA0B43UyiHu6+iTmjnUXZqq6d+XvQyTPscsrNp4qOXYXUvkskmGPLGl2U/wB1XOlR92aovksAs+XHrXFIOZxbNbgLwBPVxBvGnnzmQIerSBeJ/2YgdHn/yDOAW9R4hVIDrLks4AZwAuNGaFK8rdhvmGPYMpm6s83JrlaBvQhQmUzJeDKZxlTBnSaq2VAk0Ud/QfQhvwp7xZZ0wAAAABJRU5ErkJggg==">
                 <h1>Despacho gratis</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel culpa laboriosam iste commodi aut
-                    reprehenderit labore sapiente itaque animi deserunt. Accusamus dolore ab soluta officiis odit
-                    dignissimos voluptate cupiditate, recusandae.
-                </p>
-                <a href="">Ver Curso</a>
+                <strong>
+                    <p>
+                        Descubre cientos de productos con envío gratis dentro Santiago.
+                    </p>
+                </strong>
             </article>
             <article>
-                <i class="fas fa-database"></i>
+                <i class="Retiro"></i>
+                <img
+                    src="data:image/png;base64,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">
                 <h1>Punto de retiro</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel culpa laboriosam iste commodi aut
-                    reprehenderit labore sapiente itaque animi deserunt. Accusamus dolore ab soluta officiis odit
-                    dignissimos voluptate cupiditate, recusandae.
-                </p>
-                <a href="">Ver Curso</a>
+                <strong>
+                    <p>
+                        Puede hacer tu compra online y retirar en (Direccion).
+                    </p>
+                </strong>
             </article>
         </section>
-        
-        <!--
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="https://media.spdigital.cl/__sized__/products/x5xcsduy_499076c9-thumbnail-1080x1080.png" class="d-block w-100" alt="...">
-                <img src="https://media.spdigital.cl/__sized__/products/r412a2ud_794ad640-thumbnail-1080x1080.png" class="d-block w-100" alt="...">
-            </div>
-              <div class="carousel-item">
-                
-              </div>
-              <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-        </div>-->
+
+        <h2>
+            <strong>¡AGREGA A TU SETUP GAMER!</strong>
+        </h2>
+
+        <!-- aqui empiezan las tarjetas-->
+        <div class="container">
+            <div class="card">
+                <figure>
+                    <img src="https://www.muycomputer.com/wp-content/uploads/2020/06/Cuanta-memoria-Ram-necesito.jpg"
+                        alt="">
+                </figure>
+                <div class="contenido">
+                    <h3>MEMORIAS RAM</h3>
+                    <P>Dale mas memoria Ram a tu PC con nuestros mejores productos, encuentra todas las marcas, y
+                        modelos que necesites!.</P>
+                    <a href=""></a>
+                </div>
+
+                <div class="card">
+                    <figure>
+                        <img src="https://images.unsplash.com/photo-1544966685-5bb6cc6cb6d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG1vdXNlJTIwZ2FtZXJ8ZW58MHx8MHx8&w=1000&q=80"
+                            alt="">
+                    </figure>
+                    <div class="contenido">
+                        <h3>MOUSE DE TODAS LAS MARCAS!</h3>
+                        <P>Encuentra los mejores Mouses para tu Setup, de todas las marcas, de todos los estilos, al
+                            mejor precio!</P>
+                        <a href=""></a>
+                    </div>
+
+                    <div class="card">
+                        <figure>
+                            <img src="https://i.blogs.es/579f74/teclado/1366_2000.jpg" class="card-img-top" alt="">
+                        </figure>
+                        <div class="contenido">
+                            <h3>LOS MEJORES TECLADOS!</h3>
+                            <P>Encontraras los mejores teclados, para darle vida a tu setup y ser el mejor en todo!.</P>
+                            <a href=""></a>
+                        </div>
+                    </div>
+
+                </div>
 
 
-        <p>
-            For more biographical information on Philip Kotler, see <a target="_blank"
-                href="https://www.amazon.com/My-Adventures-Marketing-Autobiography-Philip/dp/0990576760">My Adventures
-                in Marketing</a> , available at Amazon. Also see My Life as a Humanist, Amazon 2022.
-        </p>
+                <p>
+                    For more biographical information on Philip Kotler, see <a target="_blank"
+                        href="https://www.amazon.com/My-Adventures-Marketing-Autobiography-Philip/dp/0990576760">My
+                        Adventures
+                        in Marketing</a> , available at Amazon. Also see My Life as a Humanist, Amazon 2022.
+                </p>
 
     </main>
 

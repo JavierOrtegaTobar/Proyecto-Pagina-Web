@@ -1,0 +1,23 @@
+
+header {
+    font-size: 20px;
+}
+
+
+.nav-link {
+    color: #af94ce;
+}
+
+body{
+    background-color: black;
+    text-align: center;
+}
+
+.imagenes {
+    margin-top: 40px;
+}
+
+h1{
+    font-size: 40px;
+    color: #d5c3e7;
+}

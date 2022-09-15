@@ -3,6 +3,17 @@
     margin: 0;
     padding: 0;
 }
+
+
+header {
+    font-size: 20px;
+}
+
+
+.nav-link {
+    color: #af94ce;
+}
+
 body {
 	margin: 0;
     color: Black;
@@ -11,6 +22,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
+
 section{
     font-size: 50px;
      background: rgba(197, 191, 191, 0.5);

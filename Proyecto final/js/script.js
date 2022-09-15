@@ -1,104 +1,88 @@
-//alert("Hola mundo!!!");
-
-//este es un comentario js//
-
-/* comentario en parrafo
- 
- 
-*/
-
 window.addEventListener("DOMContentLoaded", (e) => {
-  // con el evenbto DOMCcontentLoaded me aseguro que todas las etiquetas html
-  //fueron cargadas y procesadas en el navegador (carga dandole prioridad a html)
-  //en vez de imagenes y frames.
-  console.log("evento DomContentLoaded")
-
-  //sintaxis
-  // ejemplo: let nombreVariable = valor
-  // ej: let nombre = "santiago"
-  // ej: let edad = 34;
-
-  let boton = document.getElementById("btn-suscribir");
-  boton.addEventListener("click", (ev) => {
+  console.log("DOM cargando...")
+  let botonEnviar = document.getElementById("btn-Send");
+  botonEnviar.addEventListener("click", async (e) => {
+    e.preventDefault()
     try {
 
       //recuperar los valores del formulario
 
       let nombre = document.getElementById("nombre").value;
       let email = document.getElementById("correo").value;
-      if (nombre.length < 5) {
-        throw new Error("El nombre es demasiado corto");
-
-      }
-
-      let intereses = getIntereses();
-      let genero = getGenero();
-      let suscriptor = {
-
+      let telefono = document.getElementById("telefono").value;
+      let contacto = getContacto();
+      let Problema = getProblema();
+      let FormularioPro = {
         nombre,
         email,
-        genero,
-        fecha_registro: (new Date()).toISOString()
-
+        telefono,
+        contacto,
+        Problema
       };
 
-      console.dir(suscriptor);
-      guardarSuscriptor(suscriptor);
-
-    } catch (e) {
-      mostrarError(e.message)
-    }
-
-  });
-
-
+      const url = "https://learningfirebase-fcaed-default-rtdb.firebaseio.com/suscriptores.json";
+            const respuesta = await fetch(url, {
+                method: 'POST',
+                body: JSON.stringify(FormularioPro)
+            });
+            if( !respuesta.ok ) {
+                throw new Error("Error en la respuesta. Código: "+respuesta.status);
+            }
+            const data = await respuesta.json();
+            mostrarExito(`Se ha guardado su formulario con ID: ${data.nombre}`)
+        } catch( e ) {
+            mostrarError(e.message);
+        }
+        return false;
+    });    
 });
-
-function guardarSuscriptor(suscriptor) {
-  const url = "https://cursofrontend-6d8fc-default-rtdb.firebaseio.com/suscriptores.json";
-  fetch(url, {
-    method: "POST",
-    body: JSON.stringify(suscriptor)
-
-  });
-
-    .then(respuesta => respuesta.json())
-    .then(data => mostrarExito("Se guardo correctamente su suscripcion"))
-  ;
-}
-
-function getIntereses() {
-  let inputIntereses = document.querySelectorAll("input[name='intereses']:checked");
-  let arrIntereses = [];
-  inputIntereses.forEach(nodoInteres => arrIntereses.push(nodoInteres.value));
-
-  if (inputIntereses.length < 1) {
-    throw new Error("Debe seleccionar al menos 1 tema de su interes")
+function getContacto() {
+  const arr = document.querySelectorAll("input[type='checkbox'][name='Contacto']:checked");
+  let Contacto = [];
+  arr.forEach( i => Contacto.push(i.value));
+  if(arr.length == 0) {
+      throw new Error("Debe seleccionar al menos un tipo de contacto");
   }
-
-  return arrIntereses;
+  return Contacto;
 }
 
-
-function getGenero() {
-  let inputSeleccionado = document.querySelector("input[name='genero']:checked");
-  if (inputSeleccionado == null) {
-
-    throw new Error("Debe seleccionar un genero!");
+function getProblema() {
+  const arr = document.querySelectorAll("input[type='radio'][name='Problema']:checked");
+  if(arr.length == 0) {
+      throw new Error("Debe seleccionar un problema ");        
   }
-  const genero = inputSeleccionado.value;
-  return genero;
+  return arr[0].value;
 }
 
-
-
-function mostrarError(mensajeDeError) {
-  document.getElementById("form-mensaje-error").style.display = "block";
-  const ul = document.querySelector("#form-mensaje-error ul");
-  const li = document.createElement("li");
-  const liText = document.createTextNode(mensajeDeError);
-  li.appendChild(liText);
+function mostrarMensaje(idContenedor, mensaje) {
+  const ul = document.querySelector(`#${idContenedor} ul`);
+  const li = document.createElement("li")
+  const liContent = document.createTextNode( mensaje )
+  li.appendChild( liContent )
   ul.appendChild(li);
+}
+
+function displayMensajeExito(b) {
+  const idExito = "form-formulario-exito";
+  const idError = "form-formulario-error";
+  
+  if( b ) {        
+      document.getElementById(idExito).style.display = "block";
+      document.getElementById(idError).style.display = "none";
+  } else {
+      document.getElementById(idExito).style.display = "none";
+      document.getElementById(idError).style.display = "block";
+  }
+}
+function mostrarExito(mensaje) {
+  const idExito = "form-formulario-exito";
+  displayMensajeExito(true);
+  mostrarMensaje(idExito, mensaje);
+}
+function mostrarError(mensaje) {
+  const idError = "form-formulario-error";
+  displayMensajeExito(false);
+  mostrarMensaje(idError, mensaje);
 }
 
 
