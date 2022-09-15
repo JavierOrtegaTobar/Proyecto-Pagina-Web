@@ -2,6 +2,7 @@
 /* 1) Selectores por etiqueta */
 
 header {
+
     font-size: 20px;
 }
 
@@ -9,6 +10,14 @@ header {
 .nav-link {
     color: #af94ce;
 }
+
+
+    background-color: rgb(0, 0, 0);
+    color: white;
+    
+}
+
+
 
 body {
     background-color: #170275f5;
@@ -46,8 +55,10 @@ main {
     text-align: center;
 }
 
+.logo img{
+    margin-top: 2px;
 
-
+}
 
 .grupo-1 .box p{
     color: #b3b3b3;
@@ -87,7 +98,6 @@ a {
 
 .container{
     width: 100%;
-     
 }
 
 .card {
