@@ -8,7 +8,7 @@ header {
 }
 
 body {
-    background-image: url("https://img.freepik.com/vector-premium/fondo-lluvia-pixeles-violeta-abstracto_23-2148362568.jpg?w=2000");
+    background-color: #1b1131;
     height: 1500px;
     background-size: cover;
   background-repeat:no-repeat;
@@ -17,7 +17,7 @@ body {
 
 section {
     font-size: 50px;
-    background: rgba(3, 14, 51, 0.548);
+    background: rgba(10, 24, 70, 0.336);
     margin: 50px 80px;
     border-radius: 60px;
     padding: 50px 100px;
@@ -145,31 +145,30 @@ a {
 
 
 @media (max-width: 2400px) {
-    .Pizza1 article {
+    .pie-pagina .grupo-1 {
         width: 20%;
     }
 }
 
 @media (max-width: 1200px) {
-    .Pizza1 article {
+    .pie-pagina a.grupo-1 {
         width: 45%;
         margin-top: 10px;
+    }
+    .Gabinete{
+        width: auto;
+    }
+    .nav-link {
+        width: auto;
     }
 }
 
 @media (max-width: 800px) {
-    .Pizza1 article {
+    .pie-pagina .grupo-1 {
         width: 100%;
     }
 
-    .Titulo {
-        text-align: center;
-        font-size: 40px;
-    }
-
-    .Subtitulo {
-        text-align: center;
-        font-size: 20px;
-        display: inline-block;
+    .Gabinete{
+        width: auto;
     }
 }

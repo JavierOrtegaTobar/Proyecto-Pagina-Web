@@ -70,3 +70,30 @@ a {
 }
 
 
+@media (max-width: 2400px) {
+    .pie-pagina .grupo-1 {
+        width: 20%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .pie-pagina a.grupo-1 {
+        width: 45%;
+        margin-top: 10px;
+    }
+    .nav-link {
+        width: auto;
+    }
+}
+
+@media (max-width: 800px) {
+    .pie-pagina .grupo-1 {
+        width: 100%;
+        max-width: 200px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        margin-bottom: 1px;
+        
+    }
+}
